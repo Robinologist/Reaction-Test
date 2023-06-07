@@ -29,6 +29,7 @@ class SecondViewController: UIViewController {
         else {
             print("Too Soon!")
         }
+        //self.dismiss(animated: true, completion: nil)
     }
     
     //ViewDidLoad --------------------------------------------------------------
@@ -51,4 +52,6 @@ class SecondViewController: UIViewController {
         
         //print(timeToPlanned)
     }
+    
+    
 }
