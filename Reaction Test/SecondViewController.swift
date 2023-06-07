@@ -53,5 +53,12 @@ class SecondViewController: UIViewController {
         //print(timeToPlanned)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
+        
+        var score = timeToPlanned
+        
+        let destinationVC = segue.destination as! ViewController
+        destinationVC.score = -(score)
+    }
+
 }

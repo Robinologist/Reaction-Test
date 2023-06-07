@@ -12,16 +12,25 @@ class ViewController: UIViewController {
     @IBOutlet var scoreView: UILabel!
     @IBOutlet var highscoreView: UILabel!
     
+    var score = -1
+    var highscore = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        var score = 0
-        var highscore = 0
+        if score > highscore {
+            highscore = score
+        }
         
-        scoreView.text = String(score)
-        highscoreView.text = String(highscore)
+        if score > -1 {
+            scoreView.text = String(score)
+        }
+        if highscore > -1 {
+            highscoreView.text = String(highscore)
+        }
+        
+        print(score)
     
     }
-
 }
