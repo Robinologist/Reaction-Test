@@ -7,19 +7,24 @@
 
 import UIKit
 
+var highscore = -1
+
 class ViewController: UIViewController {
 
     @IBOutlet var scoreView: UILabel!
     @IBOutlet var highscoreView: UILabel!
     
     var score = -1
-    var highscore = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        if score > highscore {
+        if highscore < 0 {
+            highscore = score
+        }
+        
+        if score < highscore && highscore > -1 && score > -1 {
             highscore = score
         }
         
@@ -31,6 +36,7 @@ class ViewController: UIViewController {
         }
         
         print(score)
-    
+        print(highscore)
+        
     }
 }
